@@ -10,12 +10,22 @@ public class Main {
         board.place(0, 1, 'X');
         board.place(0, 2, 'X');
 
+
         System.out.println("Current game:");
+
         board.print();
 
         if (board.hasWinner()) {
             System.out.println("Player X wins!");
         }
+
+        else if (board.isFull()) {
+            System.out.println("Draw!");
+        }
+        else {
+            System.out.println("Game still running.");
+        }
+
 
         System.out.println();
         System.out.println("Starting new game...");
