@@ -6,10 +6,23 @@ public class Main {
 
         Board board = new Board();
 
+        board.place(0, 0, 'X');
+        board.place(0, 1, 'X');
+        board.place(0, 2, 'X');
 
-
-        board.place(1, 1, 'X');
+        System.out.println("Current game:");
         board.print();
 
+        if (board.hasWinner()) {
+            System.out.println("Player X wins!");
+        }
+
+        System.out.println();
+        System.out.println("Starting new game...");
+        System.out.println();
+
+        board.clear();
+
+        board.print();
     }
 }
