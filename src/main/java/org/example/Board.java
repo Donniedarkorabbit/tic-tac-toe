@@ -38,6 +38,7 @@ public class Board {
     public boolean hasWinner() {
 
         for (int row = 0; row < 3; row++) {
+
             if (cells[row][0] != ' ' &&
                     cells[row][0] == cells[row][1] &&
                     cells[row][1] == cells[row][2]) {
@@ -47,6 +48,7 @@ public class Board {
         }
 
         for (int col = 0; col < 3; col++) {
+
             if (cells[0][col] != ' ' &&
                     cells[0][col] == cells[1][col] &&
                     cells[1][col] == cells[2][col]) {
