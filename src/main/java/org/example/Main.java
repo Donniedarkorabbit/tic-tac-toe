@@ -6,10 +6,20 @@ public class Main {
 
         Board board = new Board();
 
+        board.place(0, 0, 'X');
+        board.place(0, 1, 'X');
+        board.place(0, 2, 'X');
 
-
-        board.place(1, 1, 'X');
         board.print();
 
+        if (board.hasWinner()) {
+            System.out.println("Player X wins!");
+        }
+        else if (board.isFull()) {
+            System.out.println("Draw!");
+        }
+        else {
+            System.out.println("Game still running.");
+        }
     }
 }
